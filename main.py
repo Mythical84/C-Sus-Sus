@@ -1,6 +1,5 @@
 import CsusLexer, CsusParser, Visitor
 from antlr4 import InputStream, CommonTokenStream
-import antlr4
 
 text = '''
 print();

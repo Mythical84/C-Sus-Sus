@@ -1,11 +1,12 @@
 from CsusVisitor import CsusVisitor
 from CsusParser import CsusParser
-import ctypes
+import numpy as np
+from memory import Memory
 
 class Visitor(CsusVisitor):
 
     def __init__(self):
-        self.vars = []
+        self.memory = Memory()
 
     def visitOpExpr(self, ctx: CsusParser.OpExprContext):
         left = self.visit(ctx.lhs)
